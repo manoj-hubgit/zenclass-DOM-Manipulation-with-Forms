@@ -1,73 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-body{
-    margin-left:1rem !important;
-    background-color: rgb(229, 229, 229) !important;
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  margin-left: 1rem !important;
+  background-color: rgb(229, 229, 229) !important;
 }
-#title{
-    text-align: center;
-    font-family: "Bebas Neue", sans-serif;
+#title {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  margin-top:2rem;
+  margin-top: 2rem;
 }
-#description{
-    text-align: center;
-    font-family: "Work Sans", sans-serif;
+#description {
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
   margin-bottom: 1rem !important;
   font-weight: 500;
-
 }
-.radio{
-    display: flex;
-    margin-bottom: 1rem;
+.radio {
+  display: flex;
+  margin-bottom: 1rem;
 }
-h6{
-    padding-left:1rem;
+h6 {
+  padding-left: 1rem;
 }
-input,textarea{
-    margin-left: 2rem !important;
+input,
+textarea {
+  margin-left: 2rem !important;
 }
-form{
-    background-color:rgb(249, 249, 249);
-    padding-bottom: 1rem !important;
-    padding-top: 1rem !important;
+form {
+  background-color: rgb(249, 249, 249);
+  padding-bottom: 1rem !important;
+  padding-top: 1rem !important;
 }
-input,textarea{
-    width: 50% !important;
-
+input,
+textarea {
+  width: 50% !important;
 }
-.food,.gender{
-    width: auto !important;
+.food,
+.gender {
+  width: auto !important;
 }
-table{
-    margin-top: 2rem;
+table {
+  margin-top: 2rem;
 }
-.buttons{
-    margin: 0 !important;
-display: flex;
-justify-content: center;
+.buttons {
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (max-width: 768px) {
-    input,
-    textarea {
-      width: 85% !important;
-    }
-    form{
-        width: 90% !important;
-    }
-    table {
-        overflow-x:auto;
-        display: block;
-        width: 90% !important;
-      }
-    
-      th,
-      td {
-        white-space: nowrap;
-      }
-     
-    }
+  input,
+  textarea {
+    width: 85% !important;
+  }
+  form {
+    width: 90% !important;
+  }
+  table {
+    overflow-x: auto;
+    display: block;
+    width: 90% !important;
+  }
 
+  th,
+  td {
+    white-space: nowrap;
+  }
+}
