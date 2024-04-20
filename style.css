@@ -46,6 +46,7 @@ table{
     margin-top: 2rem;
 }
 .buttons{
+    margin: 0 !important;
 display: flex;
 justify-content: center;
 }

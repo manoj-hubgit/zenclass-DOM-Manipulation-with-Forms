@@ -68,8 +68,5 @@ let cel8=newrow.insertCell(7);
  cel8.innerHTML=val8[x]
   n++;
   x++;
-}
-function clearForm() {
   document.getElementById("form").reset();
 }
-document.getElementById("clear").addEventListener("click", clearForm);
