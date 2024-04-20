@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <h1 id="title">DOM Manipulation with Forms</h1>
+    <p id="description" class="col-11 m-auto ">
+      Please fill out the form below with your details. All fields are required
+      unless otherwise indicated. For the "Choice of Food" field, please select
+      at least 2 options from the provided list. Once you submit the form, your
+      information will be added to the table. You can clear the form fields
+      after updating the table by clicking the "Clear" button.
+    </p>
+
+    <div class="container-fluid">
+      <div class="row m-sm-auto">
+        <div class="col-12">
+          <form id="form">
+            <div class="form-group">
+              <label for="first-name"><h6>First Name:</h6></label><br />
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                placeholder="Enter the first name here"
+                required
+              /><br /><br />
+            </div>
+            <div class="form-group">
+              <label for="last-name"><h6>Last Name:</h6></label><br />
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                placeholder="Enter the last name here"
+                required
+              /><br /><br />
+            </div>
+
+            <div class="form-group">
+              <label for="address"><h6>Address:</h6></label><br />
+              <textarea
+                id="address"
+                name="address"
+                placeholder="Enter the address"
+                required
+              ></textarea
+              ><br /><br />
+            </div>
+
+            <div class="form-group">
+              <label for="pincode"><h6>Pincode:</h6></label><br />
+              <input
+                type="text"
+                id="pincode"
+                name="pincode"
+                placeholder="Enter your pincode"
+                required
+              /><br /><br />
+            </div>
+            <div class="form-group">
+              <label for="gender"><h6>Gender:</h6></label><br />
+              <div class="radio">
+                <label>
+                  <input
+                    class="rad gender"
+                    id="male"
+                    type="radio"
+                    name="gender"
+                    value="Male"
+                  />
+                  Male </label
+                ><br />
+                <label>
+                  <input
+                    class="rad gender"
+                    id="female"
+                    type="radio"
+                    name="gender"
+                    value="Female"
+                  />
+                  Female </label
+                ><br />
+                <label>
+                  <input
+                    class="rad gender"
+                    id="others"
+                    type="radio"
+                    name="gender"
+                    value="Others"
+                  />
+                  Others </label
+                ><br />
+              </div>
+            </div>
+            <div class="form-group" id="foodChoice">
+              <label for="food"
+                ><h6>Choice of Food (choose at least 2):</h6></label
+              ><br />
+              <input
+                class="food"
+                type="checkbox"
+                id="food1"
+                name="food"
+                value="Biriyani"
+              />
+              <label for="food1">Biriyani</label><br />
+              <input
+                class="food"
+                type="checkbox"
+                id="food2"
+                name="food"
+                value="Dosa"
+              />
+              <label for="food2">Dosa</label><br />
+              <input
+                class="food"
+                type="checkbox"
+                id="food3"
+                name="food"
+                value="Idly"
+              />
+              <label for="food3">Idly</label><br />
+              <input
+                class="food"
+                type="checkbox"
+                id="food4"
+                name="food"
+                value="Chapathi"
+              />
+              <label for="food4">Chapathi</label><br />
+              <input
+                class="food"
+                type="checkbox"
+                id="food5"
+                name="food"
+                value="Parotta"
+              />
+              <label for="food5">Parotta</label><br /><br />
+            </div>
+
+            <div class="form-group">
+              <label for="state"><h6>State:</h6></label><br />
+              <input type="text" id="state" name="state" required /><br /><br />
+            </div>
+            <div class="form-group">
+              <label for="country"><h6>Country:</h6></label><br />
+              <input
+                type="text"
+                id="country"
+                name="country"
+                required
+              /><br /><br />
+            </div>
+            <div class="form-group buttons">
+              <button
+                type="button"
+                id="submit"
+                onclick="addrow()"
+                class="btn btn-primary mx-2"
+              >
+                Submit
+              </button>
+              <button type="button" id="clear" class="btn btn-secondary">
+                Clear
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-12">
+          <table id="table" class="table">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>Pincode</th>
+                <th>Gender</th>
+                <th>Food</th>
+                <th>State</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+  </body>
+</html>
